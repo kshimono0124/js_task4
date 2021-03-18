@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset='utf-8'>
+  <title>スライドショー</title>
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="./slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      $('.center-item').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: '0',
+        autoplay: true,
+        draggable: false,
+        responsive: [{
+          breakpoint: 480,
+          variableWidth: true,
+          settings: {
+            centerMode: true,
+          }
+        }]
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="slider">
+      <h3>slickのスライドショー</h3>
+      <ul class="center-item">
+        <li><img src="https://pixnio.com/free-images/2019/01/10/2019-01-10-10-09-27-1200x675.jpg"></li>
+        <li><img src="https://images.all-free-download.com/images/graphicthumb/sunrise_515561.jpg"></li>
+        <li><img src="https://images-na.ssl-images-amazon.com/images/I/61MT63mM9JL._AC_UX500_.jpg"></li>
+        <li><img src="https://i.pinimg.com/originals/e3/47/ac/e347acd81209b32fa43fe53d0e495b5d.jpg"></li>
+      </ul>
+      <p>４秒ごとに自動でスライドします</p>
+      <p>左右の矢印を押下でスライドをさせることができます</p>
+    </div>
+  </div>
+</body>
+
+</html>
